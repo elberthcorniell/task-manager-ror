@@ -14,6 +14,7 @@ class GroupsController < ApplicationController
     
     def show
         @group = Group.find(params[:id])
+        @tasks = @group.tasks
         @new_task = current_user.tasks.build
     end
 

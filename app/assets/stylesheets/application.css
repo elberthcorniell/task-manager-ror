@@ -31,6 +31,10 @@ body {
     color: #434b54 !important;
 }
 
+.gray {
+    color: #99a3ae;
+}
+
 .container {
     min-height: calc(100vh - 124px);
 }
@@ -79,6 +83,14 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
 }
 
 .footer {
