@@ -1,3 +1,3 @@
 class Task < ApplicationRecord
-  belongs_to :authorId
+  belongs_to :author
 end

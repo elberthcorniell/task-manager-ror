@@ -3,7 +3,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
     create_table :tasks do |t|
       t.references :author, null: false, index: true
       t.string :name
-      t.integer :amount
+      t.string :description
 
       t.timestamps
     end

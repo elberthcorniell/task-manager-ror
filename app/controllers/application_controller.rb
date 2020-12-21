@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
 
     def current_user
         return nil if session[:user_id].nil?
-        User.find(session[:user_id])
+        begin
+            User.find(session[:user_id])
+        rescue
+            return nil
+        end 
     end
 
     def user_logged_in

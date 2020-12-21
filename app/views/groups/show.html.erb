@@ -5,8 +5,9 @@
     <div style="display: flex; align-items: center">
         <h1 style="margin: 0; margin-right: 10px"><%= @group.name %></h1>
         <button class="btn btn-danger" style="margin-right: 5px"><i class="fas fa-trash"></i></button>
-        <button class="btn btn-primary">New task</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newTask">New task</button>
     </div>
     <h2><strong>0 tasks pending</strong></h2>
 </div>
 <hr>
+<%= render partial: "tasks/modal" %>

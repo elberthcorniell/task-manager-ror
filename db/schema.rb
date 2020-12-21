@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_12_18_150844) do
   create_table "tasks", force: :cascade do |t|
     t.bigint "author_id", null: false
     t.string "name"
-    t.integer "amount"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_tasks_on_author_id"
