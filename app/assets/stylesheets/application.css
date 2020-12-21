@@ -24,10 +24,11 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 body {
-	font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
-    background-color: #f3f5f7;
-    color: #434b54;
+	font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif !important;
+    background-color: #f3f5f7 !important;
+    color: #434b54 !important;
 }
 
 .card {
@@ -36,12 +37,17 @@ body {
     width: 100vw;
     max-width: 600px;
     margin: auto;
-    padding: 20px;
     background-color: white;
 }
 
 .card.center {
     text-align: center;
+}
+
+.card.center-hard {
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 input {
