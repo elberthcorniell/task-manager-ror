@@ -10,10 +10,10 @@
           <%= link_to "Home", app_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Tasks</a>
+          <%= link_to "Tasks", tasks_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">General tasks</a>
+          <%= link_to "General tasks", tasks_general_path, class: "nav-link" %>
         </li>
         <%= logout_btn %>
       </ul>

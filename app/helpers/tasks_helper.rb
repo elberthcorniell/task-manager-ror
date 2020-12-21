@@ -6,14 +6,15 @@ module TasksHelper
                         <div class=\"space-between card-body\">
                             <div style=\"display: flex\">
                                 <div class=\"icon\">
-                                    <img src=\"#{task.group.icon}\" height=\"50\" >
+                                    <img src=\"#{task.group.nil? ? 'https://www.spaciousbreath.com/wp-content/uploads/2018/03/Giving-birth-to-Life-1080x608.jpg' : task.group.icon}\" height=\"50\" >
                                 </div>
                                 <div>
                                     <strong>#{task.name}</strong><br>
                                     <strong class=\"gray\">#{task.description}</strong>
                                 </div>
                             </div>
-                            <div>
+                            <div style=\"text-align: right\">
+                                <strong>#{task.group.nil? ? 'General task' : link_to(task.group.name, group_path(task.group_id))}</strong><br>
                                 <strong class=\"gray\">#{task.expiring_date.nil? ? 'Doesn\'t expires' : task.expiring_date}</strong>
                             </div>
                         </div>
