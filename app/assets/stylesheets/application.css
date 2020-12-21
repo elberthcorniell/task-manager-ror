@@ -31,6 +31,10 @@ body {
     color: #434b54 !important;
 }
 
+.container {
+    min-height: calc(100vh - 124px);
+}
+
 a {
     text-decoration: none !important;
 }
@@ -74,6 +78,13 @@ button {
 .space-between {
     display: flex;
     justify-content: space-between;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
 }
 
 input {
