@@ -88,7 +88,7 @@ button {
     text-align: center;
 }
 
-input {
+input, textarea {
     width: calc(100%);
     background-color: transparent;
     border: none;

@@ -2,12 +2,15 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Create new task</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><strong>Create new task</strong></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <%= form_with model: @new_task do |f| %>
             <%= f.text_field :name, placeholder: "Task name" %>
+            <%= f.text_field :group_id, placeholder: "Task name", value: params[:id], hidden: true %>
+            <%= f.text_area :description, placeholder: "Task description" %>
+            <%= f.date_field :expiring_date %>
             <%= f.submit "Create task" %>
         <% end %>
       </div>

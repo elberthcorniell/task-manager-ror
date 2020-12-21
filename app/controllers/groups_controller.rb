@@ -9,8 +9,6 @@ class GroupsController < ApplicationController
 
     def create
         current_user.groups.create!(group_params)
-        @groups = current_user.groups
-        @new_group = current_user.groups.build
         redirect_to app_path
     end
     
