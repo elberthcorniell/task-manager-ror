@@ -50,12 +50,22 @@ body {
     justify-content: center;
 }
 
+.col-3 {
+    padding-bottom: 20px;
+}
+
+.image-setter {
+    height: 150px;
+    overflow: hidden;
+}
+
 input {
-    width: calc(100% - 20px);
+    width: calc(100%);
     background-color: transparent;
     border: none;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     padding: 10px;
+    margin: 10px 0;
 }
 
 input[type=submit] {
