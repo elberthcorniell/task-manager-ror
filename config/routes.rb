@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'users#new'
   resources :users, only: [:new, :create, :show, :destroy]
   resources :groups, only: [:index, :create, :show]
-  resources :tasks, only: [:new, :create, :show]
+  resources :tasks, only: [:index, :create]
   get '/login' => 'users#new'
   delete '/logout' => 'users#destroy'
   get '/app/' => 'groups#index'

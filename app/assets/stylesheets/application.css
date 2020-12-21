@@ -40,7 +40,7 @@ a {
 }
 
 button {
-    height: 50px;
+    height: 40px;
 }
 
 .btn-primary {
@@ -78,10 +78,11 @@ button {
 .space-between {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .footer {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.04);
     padding: 20px;
     width: 100%;
     text-align: center;
