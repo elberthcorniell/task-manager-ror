@@ -31,6 +31,18 @@ body {
     color: #434b54 !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
+button {
+    height: 50px;
+}
+
+.btn-primary {
+    background-color: #3778c2 !important;
+}
+
 .card {
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 5px;
@@ -57,6 +69,11 @@ body {
 .image-setter {
     height: 150px;
     overflow: hidden;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
 }
 
 input {

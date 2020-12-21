@@ -1,5 +1,11 @@
 class GroupsController < ApplicationController
-    before_action :user_logged_in, only: [:show]
+    before_action :user_logged_in, only: [:show, :index]
+
+    def index
+        @user = current_user
+        @groups = current_user.groups
+        @new_group = current_user.groups.build
+    end
 
     def create
         current_user.groups.create!(group_params)
@@ -9,9 +15,7 @@ class GroupsController < ApplicationController
     end
     
     def show
-        @user = current_user
-        @groups = current_user.groups
-        @new_group = current_user.groups.build
+        @group = Group.find(params[:id])
     end
 
     private
