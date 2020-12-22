@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[Heroku Live Demo](https://ciao-social-ror.herokuapp.com/)
+[Heroku Live Demo](https://quiet-falls-29973.herokuapp.com/)
 
 ## Getting Started
 
