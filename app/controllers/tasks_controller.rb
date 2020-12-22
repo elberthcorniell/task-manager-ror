@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-    before_action :user_logged_in, only: [:index, :create]
+    before_action :user_logged_in, only: [:index, :create, :general, :done]
 
     def index
         @tasks = current_user.tasks.where("status = false").order(group_id: :desc)
