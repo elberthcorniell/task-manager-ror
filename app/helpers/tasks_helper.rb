@@ -1,7 +1,18 @@
 module TasksHelper
-    def render_tasks
+    def render_tasks(title = nil)
         out = ''
+        prev = 'no prev'
+        if flash[:error]
+            flash[:error].each do |error|
+                out << "<strong style=\"color: red\">#{error}</strong><br>"
+            end
+        end
         @tasks.each do |task|
+            if task.group_id != prev && !title
+                prev = task.group_id
+                out << "<br><strong>#{task.group ? task.group.name : 'General'}</strong>
+                        <hr>"
+            end
             out << "<div class=\"card w-100\" style=\"max-width: 100%; margin-top: 20px\">
                         <div class=\"space-between card-body\">
                             <div style=\"display: flex\">
