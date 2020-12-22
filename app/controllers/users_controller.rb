@@ -8,7 +8,14 @@ class UsersController < ApplicationController
 
     def create
         @user = User.find_by_name(params[:user][:name])
-        @user = User.create!(user_create) if @user.nil?
+        if @user.nil?
+            @user = User.create(user_create)
+            if @user.errors.any?
+                flash[:error] = @user.errors.full_messages
+                redirect_to login_path
+                return
+            end
+        end
         session[:user_id] = @user.id
         redirect_to app_path
     end

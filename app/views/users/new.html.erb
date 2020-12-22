@@ -5,6 +5,7 @@
       <p>Log In to</p>
           <h1><strong>Deadline</strong></h1>
           <br>
+          <%= login_err %>
           <%= form_for @user do |f| %>
             <% @user.errors.full_messages.each do |error| %>
               <strong><%= error %></strong><br />
