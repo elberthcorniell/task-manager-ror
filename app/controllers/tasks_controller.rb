@@ -2,12 +2,12 @@ class TasksController < ApplicationController
     before_action :user_logged_in, only: [:index, :create]
 
     def index
-        @tasks = current_user.tasks.order(created_at: :desc)
+        @tasks = current_user.tasks.where("status = false").order(created_at: :desc)
         @new_task = current_user.tasks.build
     end
 
     def general
-        @tasks = current_user.tasks.where("group_id IS NULL").order(created_at: :desc)
+        @tasks = current_user.tasks.where("group_id IS NULL AND status = false").order(created_at: :desc)
         @new_task = current_user.tasks.build
     end
 
@@ -19,6 +19,18 @@ class TasksController < ApplicationController
         else
             redirect_to group_path(params[:task][:group_id])
         end
+    end
+
+    def toggle
+        task = Task.find(params[:id])
+        task.status = !task.status
+        task.save
+        redirect_to tasks_done_path
+    end
+
+    def done
+        @tasks = current_user.tasks.where("status = true").order(created_at: :desc)
+        @new_task = current_user.tasks.build
     end
     
     private

@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_12_18_150844) do
     t.string "name", null: false
     t.string "description"
     t.date "expiring_date"
+    t.boolean "status", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_tasks_on_author_id"
