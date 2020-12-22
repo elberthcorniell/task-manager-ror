@@ -1,8 +1,8 @@
 module GroupsHelper
-    def render_groups
-        out = ""
-        @groups.each do |group|
-            out << "<div class=\"col-3\">
+  def render_groups
+    out = ''
+    @groups.each do |group|
+      out << "<div class=\"col-3\">
                         <a href=\"#{group_path(group.id)}\">
                             <div class=\"card w-100 h-100\">
                                 <div class=\"image-setter\">
@@ -15,8 +15,7 @@ module GroupsHelper
                             </div>
                         </a>
                     </div>"
-        end
-        out.html_safe
     end
-
+    out.html_safe
+  end
 end

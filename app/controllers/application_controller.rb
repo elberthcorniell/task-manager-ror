@@ -1,24 +1,24 @@
 class ApplicationController < ActionController::Base
-    def user_create
-        params.require(:user).permit(:name)
-    end
+  def user_create
+    params.require(:user).permit(:name)
+  end
 
-    def current_user
-        return nil if session[:user_id].nil?
-        begin
-            User.find(session[:user_id])
-        rescue
-            return nil
-        end 
-    end
+  def current_user
+    return nil if session[:user_id].nil?
 
-    def user_logged_in
-        if current_user
-            return true
-        else
-            redirect_to login_path
-            return false
-        end
+    begin
+      User.find(session[:user_id])
+    rescue StandardError
+      nil
     end
+  end
 
+  def user_logged_in
+    if current_user
+      true
+    else
+      redirect_to login_path
+      false
+    end
+  end
 end
