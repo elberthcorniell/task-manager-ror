@@ -6,17 +6,17 @@
           <h1><strong>Deadline</strong></h1>
           <br>
           <%= form_for @user do |f| %>
-                <% @user.errors.full_messages.each do |error| %>
-                  <strong><%= error %></strong><br />
-                <% end %>
-                <%= f.text_field :name, placeholder: "Name" %><br />
-                <br>
-                <%= f.submit "Log in" %>
+            <% @user.errors.full_messages.each do |error| %>
+              <strong><%= error %></strong><br />
             <% end %>
+            <%= f.text_field :name, placeholder: "Name" %><br />
             <br>
-            <br>
-            <br>
-            <p>Made with simple account login. No sign up needed.<p>
+            <%= f.submit "Log in" %>
+          <% end %>
+          <br>
+          <br>
+          <br>
+          <p>Made with simple account login. No sign up needed.<p>
       </div>
     </div>
 <section>
