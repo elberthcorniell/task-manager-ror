@@ -1,10 +1,9 @@
 module UsersHelper
   def logout_btn
-    unless session[:user_id].nil?
-      "<li class=\"nav-item\">
-              #{link_to('Log out', logout_path, method: :delete, class: 'nav-link')}
-          </li>".html_safe
-    end
+    out = "<li class=\"nav-item\">
+                  #{link_to('Log out', logout_path, method: :delete, class: 'nav-link')}
+              </li>".html_safe
+    return out if session[:user_id].nil?
   end
 
   def login_err

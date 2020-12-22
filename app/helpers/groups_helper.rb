@@ -1,3 +1,5 @@
+# rubocop:disable Layout/LineLength
+
 module GroupsHelper
   def render_groups
     out = ''
@@ -19,3 +21,5 @@ module GroupsHelper
     out.html_safe
   end
 end
+
+# rubocop:enable Layout/LineLength
