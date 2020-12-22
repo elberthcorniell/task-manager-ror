@@ -14,7 +14,7 @@ module TasksHelper
                                 </div>
                             </div>
                             <div style=\"text-align: right\">
-                                <strong>#{task.group.nil? ? 'General task' : link_to(task.group.name, group_path(task.group_id))}</strong><br>
+                                <strong>#{!params[:id].nil? ? task.author.name : (task.group.nil? ? 'General task' : link_to(task.group.name, group_path(task.group_id)))}</strong><br>
                                 <strong class=\"gray\">#{task.expiring_date.nil? ? 'Doesn\'t expires' : task.expiring_date}</strong>
                             </div>
                         </div>

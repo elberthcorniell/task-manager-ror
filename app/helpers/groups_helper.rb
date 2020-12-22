@@ -10,6 +10,7 @@ module GroupsHelper
                                 </div>
                                 <div class=\"card-body\">
                                     <h2><strong>#{group.name}</strong></h2>
+                                    <p><strong class=\"gray\">#{group.created_at}</strong></p>
                                 </div>
                             </div>
                         </a>

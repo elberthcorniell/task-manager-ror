@@ -2,12 +2,12 @@ class TasksController < ApplicationController
     before_action :user_logged_in, only: [:index, :create]
 
     def index
-        @tasks = current_user.tasks
+        @tasks = current_user.tasks.order(created_at: :desc)
         @new_task = current_user.tasks.build
     end
 
     def general
-        @tasks = current_user.tasks.where("group_id IS NULL")
+        @tasks = current_user.tasks.where("group_id IS NULL").order(created_at: :desc)
         @new_task = current_user.tasks.build
     end
 

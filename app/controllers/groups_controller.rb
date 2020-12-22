@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
 
     def index
         @user = current_user
-        @groups = current_user.groups
+        @groups = current_user.groups.order(name: :asc)
         @new_group = current_user.groups.build
     end
 
