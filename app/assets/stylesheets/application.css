@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'proxima_nova_rgregular';
-  src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
-  src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  font-family: 'proxima_nova_rgregular';    
+  src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot'),
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
     url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
     url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
     url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
@@ -36,7 +36,7 @@ button {
 }
 
 .card {
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   width: 100vw;
   max-width: 600px;
@@ -84,11 +84,12 @@ button {
   text-align: center;
 }
 
-input, textarea {
+input,
+textarea {
   width: calc(100%);
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px;
   margin: 10px 0;
 }
