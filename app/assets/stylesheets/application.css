@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'proxima_nova_rgregular';
-  src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot'),
+  src:
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot'),
     url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
     url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
     url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
