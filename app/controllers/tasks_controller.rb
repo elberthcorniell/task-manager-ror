@@ -36,4 +36,13 @@ class TasksController < ApplicationController
     task.save
     redirect_to tasks_done_path
   end
+
+  private
+
+  def tasks_params
+    param = params.require(:task).permit(:name, :description, :expiring_date, :group_id)
+    param.delete(:group_id) if param[:group_id] == ''
+    param[:author_id] = current_user.id
+    param
+  end
 end

@@ -15,6 +15,7 @@ A task manager for everything you can imagine with the ability of creating task 
 ## Video Demo
 
 [Task Manager Video Demo](https://www.loom.com/share/c5db354ab7bb4777a0fdbd6f3c09088d)
+[Task Manager Video Demo Updates](https://www.loom.com/share/bc7a8f6bfe1d4b209b73dfd3947beef5)
 
 ## Getting Started
 

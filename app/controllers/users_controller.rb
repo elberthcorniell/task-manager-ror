@@ -20,10 +20,14 @@ class UsersController < ApplicationController
     redirect_to app_path
   end
 
-  def show; end
-
   def destroy
     session[:user_id] = nil
     redirect_to login_path
+  end
+
+  private
+
+  def user_create
+    params.require(:user).permit(:name)
   end
 end
