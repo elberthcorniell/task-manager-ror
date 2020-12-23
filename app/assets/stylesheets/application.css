@@ -1,15 +1,104 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src:
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot'),
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif !important;
+  background-color: #f3f5f7 !important;
+  color: #434b54 !important;
+}
+
+.gray {
+  color: #99a3ae;
+}
+
+.container {
+  min-height: calc(100vh - 124px);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+button {
+  height: 40px;
+}
+
+.btn-primary {
+  background-color: #3778c2 !important;
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 100vw;
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+}
+
+.card.center {
+  text-align: center;
+}
+
+.card.center-hard {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.col-3 {
+  padding-bottom: 20px;
+}
+
+.image-setter {
+  height: 150px;
+  overflow: hidden;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+input,
+textarea {
+  width: calc(100%);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #5fb523;
+  border: none;
+  color: white;
+  margin-top: 20px;
+}

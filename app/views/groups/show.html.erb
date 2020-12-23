@@ -1,0 +1,13 @@
+<div class="image-setter" style="border-radius: 5px">
+    <img src="<%= @group.icon %>" class="card-img-top" alt="..."  onerror="this.onerror=null;this.src='/assets/error.jpg';">
+</div>
+<div class="space-between p-1" style="margin-top: 10px;">
+    <div style="display: flex; align-items: center">
+        <h1 style="margin: 0; margin-right: 10px"><%= @group.name %></h1>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newTask">New task</button>
+    </div>
+    <h2><strong><%= @tasks.length %> tasks pending</strong></h2>
+</div>
+<hr>
+<%= render_tasks true %>
+<%= render partial: "tasks/modal" %>
