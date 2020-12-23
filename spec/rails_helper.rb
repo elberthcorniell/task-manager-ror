@@ -9,6 +9,24 @@ require 'capybara/rspec'
 require 'capybara/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
+def login
+  visit login_path
+  within('form') do
+    fill_in 'Name', with: 'luffy'
+  end
+  click_button 'Log in'
+end
+
+def create_task(task = '')
+  click_link 'Tasks'
+  click_button 'New general task'
+  within('form') do
+    fill_in 'Task name', with: task
+    fill_in 'Task description', with: 'Buy and HODLLL'
+  end
+  click_button 'Create task'
+end
+
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
