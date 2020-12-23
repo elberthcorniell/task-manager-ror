@@ -30,19 +30,19 @@ RSpec.describe 'Tasks', type: :feature do
 end
 
 RSpec.describe 'Tasks', type: :feature do
-    describe 'Can undone task' do
-      it 'It undone taks' do
-        login
-        create_task 'Buy Bitcoin'
-        click_link 'Done'
-        Capybara.using_wait_time(10) do
-          visit tasks_path
-        end
-        Capybara.using_wait_time(10) do
-            visit tasks_done_path
-          end
-          click_link 'Undone'
-        expect(page).to_not have_content('Buy Bitcoin')
+  describe 'Can undone task' do
+    it 'It undone taks' do
+      login
+      create_task 'Buy Bitcoin'
+      click_link 'Done'
+      Capybara.using_wait_time(10) do
+        visit tasks_path
       end
-   end
+      Capybara.using_wait_time(10) do
+        visit tasks_done_path
+      end
+      click_link 'Undone'
+      expect(page).to_not have_content('Buy Bitcoin')
+    end
+  end
 end
