@@ -1,5 +1,5 @@
 # Deadline - An opensource task manager
- A task manager for everything
+A task manager for everything you can imagine with the ability of creating task groups for specific events or areas of your life and deadlines for each tag. Build using Ruby on Rails and Bootstrap.
 
 ![Desdline tasks manager](./.github/capture.png) <br>
 
@@ -12,9 +12,13 @@
 
 [Heroku Live Demo](https://quiet-falls-29973.herokuapp.com/)
 
+## Video Demo
+
+[Task Manager Video Demo](https://www.loom.com/share/c5db354ab7bb4777a0fdbd6f3c09088d)
+
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps:
 
 ### Prerequisites
 
@@ -24,10 +28,22 @@ Postgres: >=9.5
 
 ### Setup
 
+Clone the repository:
+
+```
+    git clone https://github.com/elberthcorniell/task-manager-ror.git
+```
+
+Open the repo folder:
+
+```
+    cd task-manager-ror
+```
+
 Instal gems with:
 
 ```
-bundle install
+    bundle install
 ```
 
 Setup database with:
@@ -37,15 +53,9 @@ Setup database with:
    rails db:migrate
 ```
 
-### Github Actions
+Entity Relationship Diagram of the database setted in the last step:
 
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
+![Tasks manager ERD](./.github/ERD.png) 
 
 ### Usage
 

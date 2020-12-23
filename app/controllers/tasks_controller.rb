@@ -20,13 +20,13 @@ class TasksController < ApplicationController
       else
         redirect_to group_path(params[:task][:group_id])
       end
-      return
-    end
-    @tasks.save
-    if params[:task][:group_id] == ''
-      redirect_to tasks_path
     else
-      redirect_to group_path(params[:task][:group_id])
+      @tasks.save
+      if params[:task][:group_id] == ''
+        redirect_to tasks_path
+      else
+        redirect_to group_path(params[:task][:group_id])
+      end
     end
   end
 
@@ -42,12 +42,4 @@ class TasksController < ApplicationController
     @new_task = current_user.tasks.build
   end
 
-  private
-
-  def tasks_params
-    param = params.require(:task).permit(:name, :description, :expiring_date, :group_id)
-    param.delete(:group_id) if param[:group_id] == ''
-    param[:author_id] = current_user.id
-    param
-  end
 end

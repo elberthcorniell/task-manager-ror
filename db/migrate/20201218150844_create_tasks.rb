@@ -7,7 +7,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.references :group, foreign_key: true
       t.string :name, null: false
       t.string :description
-      t.date :expiring_date
+      t.datetime :expiring_date
       t.boolean :status, null: false, default: false
       t.timestamps
     end
