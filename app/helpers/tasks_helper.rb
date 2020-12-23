@@ -43,7 +43,7 @@ module TasksHelper
                           <strong class=\"gray\">#{if task.expiring_date.nil?
                                                      'Doesn\'t expires'
                                                    else
-                                                     "#{task.expiring_date.strftime("%-d/%-m/%y - %H:%M")} (#{((task.expiring_date - Time.now).to_f / 3600).to_i} hours)"
+                                                     "#{task.expiring_date.strftime('%-d/%-m/%y - %H:%M')} (#{((task.expiring_date - (Time.now.in_time_zone Time.zone)).to_f / 3600).to_i} hours)"
                                                    end}</strong>
                         </div>
                         </div>

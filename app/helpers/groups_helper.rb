@@ -12,7 +12,7 @@ module GroupsHelper
                                 </div>
                                 <div class=\"card-body\">
                                     <h2><strong>#{group.name}</strong></h2>
-                                    <p><strong class=\"gray\">#{group.created_at.strftime("%-d/%-m/%y - %H:%M")}</strong></p>
+                                    <p><strong class=\"gray\">#{group.created_at.strftime('%-d/%-m/%y - %H:%M')}</strong></p>
                                 </div>
                             </div>
                         </a>

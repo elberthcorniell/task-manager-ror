@@ -10,7 +10,7 @@
             <%= f.text_field :name, placeholder: "Task name" %>
             <%= f.text_field :group_id, placeholder: "Task name", value: params[:id], hidden: true %>
             <%= f.text_area :description, placeholder: "Task description" %>
-            <%= f.datetime_local_field :expiring_date %>
+            <%= f.datetime_field :expiring_date %>
             <%= f.submit "Create task" %>
         <% end %>
       </div>
