@@ -1,5 +1,5 @@
 # Deadline - An opensource task manager
-A task manager for everything you can imagine with the ability of creating task groups for specific events or areas of your life and deadlines for each tag. Build using Ruby on Rails and Bootstrap.
+A task manager for everything you can imagine with the ability of creating task groups for specific events or areas of your life and deadlines for each task. Build using Ruby on Rails and Bootstrap.
 
 ![Desdline tasks manager](./.github/capture.png) <br>
 
